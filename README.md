@@ -23,7 +23,7 @@ require "cable"
 require "cable-nats"
 
 Cable.configure do |settings|
-  settings.url = ENV.fetch("CABLE_BACKEND_URL", "nats://")
+  settings.url = ENV.fetch("CABLE_BACKEND_URL", "nats://127.0.0.1:4222")
   settings.backend_class = Cable::NATSBackend
   # ... all other Cable config settings
 end
